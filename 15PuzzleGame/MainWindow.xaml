@@ -1,0 +1,24 @@
+﻿<Window x:Class="_15PuzzleGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_15PuzzleGame"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
+            <TextBlock Text="Enter size:" VerticalAlignment="Center"/>
+            <TextBox x:Name="tbSize" Width="50" Margin="5"/>
+            <Button x:Name="btnStart" Content="Start" Click="BtnStart_Click" Margin="5"/>
+        </StackPanel>
+
+        <Grid x:Name="puzzleGrid" Grid.Row="1" Margin="10">
+        </Grid>
+    </Grid>
+</Window>
